@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.dataTables_filter {
+    margin-bottom: 10px;
+}
+.dataTables_filter input {
+    background-color: #1f2937 !important;
+    color: white !important;
+}
+.select2-container--default .select2-selection--multiple {
+    border-radius: 8px;
+    background-color: #111927;
+    min-height: 40px;
+    /* padding-bottom: 0; */
+    color: white;
+}
+.select2-container .select2-search--inline .select2-search__field {
+    vertical-align: middle;
+    margin-top: 0;
+    margin-left: 12px;
+    font-size: 14px;
+}
+.select2-selection__choice {
+    font-size: 14px;
+}
+.select2-selection__rendered {
+    height: 100%;
+}
+.select2-container--default
+    .select2-selection--multiple
+    .select2-selection__choice {
+    background-color: #1f2937;
+}
+
+.select2-results__option {
+    font-size: 14px !important;
+}
