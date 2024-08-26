@@ -99,7 +99,14 @@
                 <x-responsive-nav-link :href="route('profile.edit')">
                     {{ __('Profile') }}
                 </x-responsive-nav-link>
-
+                @if (Auth::user()->role == 'admin')
+                    <x-responsive-nav-link :href="route('youtube.index')">
+                        {{ __('Youtube') }}
+                    </x-responsive-nav-link>
+                    <x-responsive-nav-link :href="route('user.index')">
+                        {{ __('Users') }}
+                    </x-responsive-nav-link>
+                @endif
                 <!-- Authentication -->
                 <form method="POST" action="{{ route('logout') }}">
                     @csrf

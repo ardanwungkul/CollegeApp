@@ -16,12 +16,12 @@
         }
     @endphp
     <div class="space-y-2 p-3">
-        <div class="flex gap-4">
-            <div class="w-2/3 flex-none">
-                <div class="h-[379px]">
+        <div class="flex flex-col md:flex-row gap-4">
+            <div class="md:w-2/3 flex-none">
+                <div class="md:h-[379px] h-[200px] sm:h-[250px]">
                     <iframe class="w-full h-full rounded-lg" src="https://www.youtube.com/embed/{{ $youtube->link }}"
                         title="YouTube video player" frameborder="0"
-                        allow="accelerometer;  clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allow="accelerometer;  clipboard-write; encrypted-media; gyroscope; web-share"
                         allowfullscreen></iframe>
                 </div>
                 <div class="space-y-4 mt-4">
@@ -40,7 +40,7 @@
                                 Subscriber</p>
                         </div>
                     </div>
-                    <div class="w-full cp-1 rounded-lg p-3 text-white bg-gray-800">
+                    <div class="w-full cp-1 rounded-lg p-3 text-white bg-gray-800 text-sm md:text-base">
                         <p>
                             {!! nl2br(e($youtube->deskripsi)) !!}
                         </p>
@@ -60,7 +60,7 @@
                                             {{-- <iframe class="w-[168px] h-[94px] rounded-lg"
                                                 src="https://www.youtube.com/embed/{{ $item->link }}"
                                                 title="YouTube video player" frameborder="0"
-                                                allow="accelerometer;  clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                                allow="accelerometer;  clipboard-write; encrypted-media; gyroscope; web-share"
                                                 allowfullscreen></iframe> --}}
                                         </div>
                                         <div>

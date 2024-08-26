@@ -9,6 +9,30 @@
     background-color: #1f2937 !important;
     color: white !important;
 }
+#DataTables_Table_0_filter {
+    color: rgb(156 163 175);
+    display: flex;
+    justify-content: right;
+    white-space: nowrap;
+}
+.dataTables_wrapper {
+    margin-top: 15px;
+}
+.dataTables_filter {
+    /* margin-bottom: 20px;
+    margin-top: 30px; */
+}
+@media (max-width: 640px) {
+    .dataTables_filter {
+        width: 100%;
+    }
+    .dataTables_filter input {
+        width: 100%;
+    }
+    .dataTables_filter label {
+        width: 100%;
+    }
+}
 .select2-container--default .select2-selection--multiple {
     border-radius: 8px;
     background-color: #111927;

@@ -78,7 +78,10 @@ class YoutubeController extends Controller
      */
     public function edit(Youtube $youtube)
     {
-        //
+        $user = User::whereNot('role', 'admin')->get();
+        $group = GroupUser::whereHas('user')->get();
+        $usersWithoutGroups = User::doesntHave('group')->get();
+        return view('master.youtube.edit', compact('youtube', 'user', 'group', 'usersWithoutGroups'));
     }
 
     /**
@@ -86,7 +89,15 @@ class YoutubeController extends Controller
      */
     public function update(Request $request, Youtube $youtube)
     {
-        //
+        $videoId = FacadesYoutube::parseVidFromURL($request->link);
+        $video = FacadesYoutube::getVideoInfo($videoId);
+
+        $youtube->judul = $video->snippet->title;
+        $youtube->deskripsi = $video->snippet->description;
+        $youtube->link = $videoId;
+        $youtube->save();
+        $youtube->user()->sync($request->user);
+        return redirect()->route('youtube.index')->with(['success' => 'Berhasil Mengedit Youtube']);
     }
 
     /**

@@ -17,11 +17,11 @@
     @endphp
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
-            {{ __('Dashboard') }}
+            {{ __('List Content') }}
         </h2>
     </x-slot>
     <div>
-        <div class="grid grid-cols-4 gap-4">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             @foreach ($youtube as $item)
                 <div class="w-full rounded-lg bg-gray-800">
                     {{-- <iframe class="w-full object-cover rounded-t-lg"
